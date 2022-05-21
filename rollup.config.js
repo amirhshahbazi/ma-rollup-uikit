@@ -4,6 +4,8 @@ import commonjs from "@rollup/plugin-commonjs"
 import typescript from "@rollup/plugin-typescript"
 import peer from 'rollup-plugin-peer-deps-external'
 import dts from 'rollup-plugin-dts'
+import postcss from 'rollup-plugin-postcss'
+import del from "rollup-plugin-delete"
 
 export default [
     {
@@ -22,12 +24,16 @@ export default [
             }
         ],
         plugins: [
+            del({
+                targets: 'dist/*'
+            }),
             resolve(),
             commonjs(),
             peer(),
             typescript({
                 tsconfig: './tsconfig.json'
             }),
+            postcss()
         ]
     },
     {

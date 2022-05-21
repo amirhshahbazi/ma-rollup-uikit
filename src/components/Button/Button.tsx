@@ -1,12 +1,12 @@
 import React from "react"
-import { ButtonProps } from './Button.types'
+import {ButtonProps} from './Button.types'
+import styles from './Button.module.css'
 
 const Button: React.FC<ButtonProps> = ({title}) => {
     return (
-        <button style={{
-            background: 'red',
-            color: 'white',
-        }}>{title}</button>
+        <button className={styles.maButton}>
+            {title}
+        </button>
     )
 }
 
