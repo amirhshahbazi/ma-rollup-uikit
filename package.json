@@ -1,0 +1,8 @@
+{
+  "name": "ma-rollup-uikit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "author": "Amirhossein Shahbazi",
+  "license": "ISC"
+}
