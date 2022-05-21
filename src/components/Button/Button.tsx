@@ -1,6 +1,9 @@
 import React from "react"
-import {ButtonProps} from './Button.types'
 import styles from './Button.module.css'
+
+interface ButtonProps {
+    title: string
+}
 
 const Button: React.FC<ButtonProps> = ({title}) => {
     return (
